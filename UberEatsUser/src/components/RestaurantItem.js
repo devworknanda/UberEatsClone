@@ -1,18 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import RestaurantItem from "./src/components/RestaurantItem";
-import restaurants from "./assets/data/restaurants.json"
+import {Image, StyleSheet, Text, View} from "react-native";
 
+const RestaurantItem = ({item}) => (
+    <View style={styles.restaurantContainer}>
+        <Image
+            source={{
+                uri: item.image
+            }}
+            style={styles.image}
+        />
+        <Text style={styles.title}>{item.name}</Text>
+        <Text style={styles.subtitle}>$1.99 15-30 minutes</Text>
+    </View>
+);
 
-export default function App() {
-    return (
-        <View style={styles.container}>
-            <StatusBar style="auto" />
-            <RestaurantItem item={restaurants[0]}/>
-            <RestaurantItem item={restaurants[1]}/>
-        </View>
-    );
-}
+export default RestaurantItem;
+
 
 const styles = StyleSheet.create({
     container: {
