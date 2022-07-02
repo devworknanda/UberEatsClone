@@ -4,6 +4,8 @@ import RestaurantItem from "./src/components/RestaurantItem";
 import restaurants from "./assets/data/restaurants.json"
 import Home from "./src/screens/Home";
 import RestaurantDetails from "./src/screens/RestaurantDetails";
+import DishDetails from "./src/screens/DishDetails";
+import Basket from "./src/screens/Basket";
 
 
 export default function App() {
@@ -11,7 +13,8 @@ export default function App() {
         <View style={styles.container}>
             <StatusBar style="auto" />
             {/*<Home />*/}
-            <RestaurantDetails item={restaurants[0]}/>
+            {/*<RestaurantDetails item={restaurants[0]}/>*/}
+            <Basket />
         </View>
     );
 }
