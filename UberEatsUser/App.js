@@ -6,6 +6,8 @@ import Home from "./src/screens/Home";
 import RestaurantDetails from "./src/screens/RestaurantDetails";
 import DishDetails from "./src/screens/DishDetails";
 import Basket from "./src/screens/Basket";
+import Orders from "./src/screens/Orders";
+import OrderDetails from "./src/screens/OrderDetails";
 
 
 export default function App() {
@@ -14,7 +16,7 @@ export default function App() {
             <StatusBar style="auto" />
             {/*<Home />*/}
             {/*<RestaurantDetails item={restaurants[0]}/>*/}
-            <Basket />
+            <OrderDetails />
         </View>
     );
 }

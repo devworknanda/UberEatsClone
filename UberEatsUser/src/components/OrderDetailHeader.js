@@ -1,29 +1,26 @@
-import {View, Text, StyleSheet, Image, FlatList} from "react-native";
+import {Image, StyleSheet, Text, View} from "react-native";
 
-const RestaurantDetailsHeader = ({item}) => {
+const OrderDetailHeader = ({item}) => {
     return (
         <View>
             <Image
                 source={{
-                    uri: item.image
+                    uri: item.Restaurant.image
                 }}
                 style={styles.image}
             />
             <View style={styles.container}>
-                <Text style={styles.title}>{item.name}</Text>
+                <Text style={styles.title}>{item.Restaurant.name}</Text>
                 <Text style={styles.subtitle}>
-                    $ {item.deliveryFee} &#8226; {item.minDeliveryTime}-{item.maxDeliveryTime} minutes
+                    {item.status} &#8226; 2 days ago
                 </Text>
-                <View style={styles.rating}>
-                    <Text>{item.rating}</Text>
-                </View>
-                <Text style={styles.menuTitle}>Menu</Text>
+                <Text style={styles.menuTitle}>Your Orders</Text>
             </View>
         </View>
     )
-}
+};
 
-export default RestaurantDetailsHeader;
+export default OrderDetailHeader
 
 const styles = StyleSheet.create({
     page: {
